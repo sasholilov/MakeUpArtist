@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-wrapper"><img src="/assets/img/logo.png" /></div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="tel:+359897520400"><img src="/assets/img/call.png" /></a>
+            </li>
+            <li>
+              <a href="tel:+359897520400"><span>+359 897 520 400</span></a>
+            </li>
+            <li><span>|</span></li>
+            <li><img src="/assets/img/schedule.png" /></li>
+            <li>
+              <a href="#"><span>Book an appointment</span></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="section-one">
+        <div class="section-one-left">
+          <div class="veretical-text">
+            <p><span></span>Your personal fashion stylist</p>
+          </div>
+          <div>
+            <h1>Professional makup artist for events</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              nulla debitis aliquam dolore, perspiciatis incidunt quae? Cum,
+              soluta ea. Maxime quidem temporibus natus sunt ducimus, reiciendis
+              pariatur accusamus saepe ipsam!
+            </p>
+          </div>
+        </div>
+        <div class="section-one-right">
+          <img src="/assets/img/slide_make_04.jpg" />
+          <img src="/assets/img/slide_make_02.jpg" />
+        </div>
+      </div>
+
+      <div class="section-two">
+        <div>
+          <h1>Professional makeup<span class="line"></span></h1>
+          <p>
+            «Professional stylist tell me how beautiful it is to hide or
+            emphasize your image. The beauty lies in the details of trends, the
+            choice of fabrics and colors. We are experienced professionals and
+            guarantee you a unique result. We will provide you with the highest
+            quality of our service.»
+          </p>
+        </div>
+        <div class="image-wrapper">
+          <div class="make-daily">
+            <img src="/assets/img/make_01-280x355.jpg" />
+            <p>Daily<span> Makeup</span></p>
+          </div>
+          <div class="make-wedding">
+            <img src="/assets/img/make_02-280x355.jpg" />
+            <p>Wedding<span> Makeup</span></p>
+          </div>
+          <div class="make-event">
+            <img src="/assets/img/make_03-280x355.jpg" />
+            <p>Event<span> Makeup</span></p>
+          </div>
+          <div class="make-creative">
+            <img src="/assets/img/make_04-280x355.jpg" />
+            <p>Creative<span> Makeup</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="section-three">
+        <h1>Works<span class="line"></span></h1>
+        <div class="my-works-wrapper">
+          <img src="/assets/img/works/work1.jpg" />
+          <img src="/assets/img/works/work2.jpg" />
+          <img src="/assets/img/works/work3.jpg" />
+          <img src="/assets/img/works/work4.jpg" />
+          <img src="/assets/img/works/work5.jpg" />
+          <img src="/assets/img/works/work6.jpg" />
+        </div>
+      </div>
+      <div class="section-four">
+        <h1>Book an appointment</h1>
+        <div class="form-wrapper">
+          <div class="contact-form">
+            <input type="text" id="firstName" placeholder="First Name" />
+            <input type="text" id="lastName" placeholder="Last Name" />
+            <input
+              type="email"
+              id="telephoneNumber"
+              placeholder="Telephone number"
+            />
+            <input type="date" id="bookingDate" />
+            <input type="time" id="timeInput" step="1800" />
+            <span id="btnBook">Book</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("AlFZdnIgV7H61ek1Q");
+      })();
+    </script>
+  </body>
+</html>

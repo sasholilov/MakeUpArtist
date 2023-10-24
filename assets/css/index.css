@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+}
+header {
+  font-family: ubuntu;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+}
+
+.logo-wrapper {
+  margin-left: 10em;
+}
+
+.menu {
+  margin-right: 10em;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li img {
+  margin: 0;
+  max-width: 30px;
+}
+
+.menu ul li:last-child span {
+  margin-left: -0.8em;
+  transition: 0.3s;
+}
+
+.menu ul li:last-child span:hover {
+  color: #692c00;
+}
+
+.menu ul li:nth-child(2) span {
+  margin-left: -0.6em;
+}
+
+.menu ul li span {
+  font-size: 16px;
+}
+
+.logo-wrapper img {
+  max-width: 110px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+  list-style: none;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: rgb(45, 45, 45);
+  transition: 0.2s;
+}
+
+.section-one {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: prata;
+  padding: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
+  background-color: #f9f1ec;
+}
+
+.section-one h1 {
+  line-height: 60px;
+  font-size: 52px;
+  font-weight: 400;
+  color: #141414;
+}
+
+.section-one p {
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: #141414;
+  font-family: ubuntu;
+}
+
+.veretical-text {
+  flex: 1 1 10px;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  transform: rotate(180deg);
+  color: #141414;
+}
+
+.veretical-text p {
+  font-size: 16px;
+  font-family: Open Sans;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.veretical-text span {
+  background-color: #dfba9f;
+  height: 100px;
+  width: 1px;
+  margin-bottom: 1em;
+  display: inline-block;
+}
+
+.section-one-left {
+  display: flex;
+  gap: 2em;
+  text-align: left;
+  flex: 1 1 20%;
+}
+
+.section-one-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  flex: 1 1 40%;
+  box-sizing: border-box;
+}
+
+.section-one-right img {
+  max-width: 100%;
+}
+
+.section-two {
+  padding: 60px 120px 0px 160px;
+  background-color: #141414;
+  background: linear-gradient(#141414 90%, #ffffff 10%);
+}
+
+.section-two .line {
+  position: absolute;
+  display: inline-block;
+  background-color: #dfba9f;
+  bottom: 50%;
+  height: 3px;
+  width: 55px;
+  margin-left: 15px;
+}
+
+.section-two h1 {
+  position: relative;
+  font-family: prata;
+  color: #dfba9f;
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.section-two p {
+  margin-bottom: 5em;
+  font-family: prata;
+  color: #e8e8e8;
+  max-width: 1100px;
+  line-height: 1.8em;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.section-two div.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #f9f1ec;
+  padding: 120px 120px 60px 120px;
+}
+
+.make-daily {
+  position: relative;
+}
+
+.make-wedding {
+  position: relative;
+}
+
+.make-event {
+  position: relative;
+}
+
+.make-creative {
+  position: relative;
+}
+
+.make-daily p {
+  background-color: #141414;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.make-daily span {
+  color: #d9ba9f;
+}
+
+.make-wedding p {
+  background-color: #141414;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.make-wedding span {
+  color: #d9ba9f;
+}
+
+.make-event p {
+  background-color: #141414;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.make-event span {
+  color: #d9ba9f;
+}
+
+.make-creative p {
+  background-color: #141414;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.make-creative span {
+  color: #d9ba9f;
+}
+
+.section-three {
+  padding: 60px 120px 60px 160px;
+  background-color: #ffffff;
+}
+
+.section-three h1 {
+  position: relative;
+  font-family: prata;
+  color: #141414;
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.section-three .line {
+  position: absolute;
+  display: inline-block;
+  background-color: #141414;
+  bottom: 50%;
+  height: 3px;
+  width: 55px;
+  margin-left: 15px;
+}
+
+.my-works-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-between;
+}
+.my-works-wrapper img {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 515px;
+}
+
+.section-four {
+  padding: 60px 120px 60px 160px;
+  background-color: #f9f1ec;
+}
+
+.section-four h1 {
+  line-height: 60px;
+  font-size: 52px;
+  font-weight: 400;
+  color: #141414;
+}
+
+@media screen and (max-width: 1860px) {
+  .section-one-right img {
+    max-width: 360px;
+  }
+
+  .section-two img {
+    max-width: 240px;
+  }
+
+  .section-two div.image-wrapper {
+    padding: 30px 30px 30px 30px;
+  }
+
+  .my-works-wrapper img {
+    max-width: 390px;
+  }
+}
