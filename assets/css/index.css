@@ -203,16 +203,32 @@ header ul li a {
   position: relative;
 }
 
+.make-daily:hover {
+  transform: translateY(-0.5em);
+}
+
 .make-wedding {
   position: relative;
+}
+
+.make-wedding:hover {
+  transform: translateY(-0.5em);
 }
 
 .make-event {
   position: relative;
 }
 
+.make-event:hover {
+  transform: translateY(-0.5em);
+}
+
 .make-creative {
   position: relative;
+}
+
+.make-creative:hover {
+  transform: translateY(-0.5em);
 }
 
 .make-daily p {
@@ -317,18 +333,118 @@ header ul li a {
   flex-grow: 1;
   flex-shrink: 1;
   max-width: 515px;
+  max-height: 515px;
+}
+
+.my-works-wrapper img:hover {
+  transform: scale(1.2);
+}
+
+.img-work {
+  display: block;
+  max-width: 515px;
+  max-height: 515px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-center-text span {
+  display: block;
+  background-color: #ffffff;
+  width: 80%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: 10%;
+  height: 1px;
+  padding: 0;
+}
+
+.image-center-text p:first-child {
+  padding: 0;
+  font-size: 20px;
+  font-family: ubuntu;
+  color: #de7225;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.image-center-text p:last-child {
+  padding: 0;
+  font-size: 16px;
+  font-family: prata;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.image-center-text {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate3d(-50%, -50%, 0);
+  transition: 0.3;
 }
 
 .section-four {
   padding: 60px 120px 60px 160px;
   background-color: #f9f1ec;
+  max-width: 100%;
 }
 
 .section-four h1 {
-  line-height: 60px;
-  font-size: 52px;
-  font-weight: 400;
+  position: relative;
+  font-family: prata;
   color: #141414;
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.form-wrapper {
+  padding: 40px;
+  background-color: #fff;
+  position: relative;
+}
+
+.contact-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-form span {
+  color: #d9ba9f;
+  font-family: ubuntu;
+  background-color: #141414;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.contact-form span:hover {
+  color: #de7225;
+}
+
+.contact-form input {
+  width: 40%;
+  padding: 10px;
+}
+
+.contact-form input:focus {
+  outline: none;
+}
+
+#succes-sent {
+  position: absolute;
+  display: none;
+  margin: 0;
+  pad: 0;
+  color: green;
+  font-weight: bold;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%);
 }
 
 @media screen and (max-width: 1860px) {
@@ -346,5 +462,10 @@ header ul li a {
 
   .my-works-wrapper img {
     max-width: 390px;
+  }
+
+  .img-work {
+    max-width: 390px;
+    max-height: 390px;
   }
 }

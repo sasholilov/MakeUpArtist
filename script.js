@@ -4,6 +4,7 @@ const phone = document.getElementById("telephoneNumber");
 const bookingDate = document.getElementById("bookingDate");
 const bookingHour = document.getElementById("timeInput");
 const bookBtn = document.getElementById("btnBook");
+const succesMsg = document.getElementById("succes-sent");
 
 bookBtn.addEventListener("click", function () {
   if (
@@ -24,10 +25,10 @@ bookBtn.addEventListener("click", function () {
     emailjs.send("service_ov8ybw8", "template_j0a6pxw", bookingObject).then(
       function (response) {
         console.log("Email sent successfully", response);
-        //succesMsg.style.display = "block";
-        //setTimeout(function () {
-        // succesMsg.style.display = "none";
-        //}, 3500);
+        succesMsg.style.display = "block";
+        setTimeout(function () {
+          succesMsg.style.display = "none";
+        }, 3500);
 
         // Занулете стойностите на полетата
         firstName.value = "";
