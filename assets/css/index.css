@@ -615,6 +615,16 @@ input {
     height: 60px;
   }
 
+  header {
+    font-family: ubuntu;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #141414;
+    border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+  }
+
   .section-one-left {
     display: flex;
     gap: 0.3em;
@@ -788,10 +798,25 @@ input {
   .custom-input em {
     font-size: 12px;
   }
+  footer {
+    position: absolute;
+    background-color: #141414;
+    bottom: 0;
+    width: 100%;
+    font-family: ubuntu;
+  }
 
   footer p {
-    font-size: 6px;
+    font-size: 8px;
+    color: #d9ba9f;
+    text-align: center;
   }
+
+  footer a {
+    text-decoration: none;
+    color: #d9ba9f;
+  }
+
   #error-sent {
     position: absolute;
     display: none;
