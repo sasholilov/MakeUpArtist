@@ -2,21 +2,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
 }
 .container {
   width: 100%;
-}
-header {
-  font-family: ubuntu;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #ffffff;
-  border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+  position: relative;
+
+  header {
+    font-family: ubuntu;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #141414;
+    border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+  }
+
+  footer {
+    position: absolute;
+    background-color: #141414;
+    bottom: 0;
+    width: 100%;
+    font-family: ubuntu;
+  }
+
+  footer p {
+    color: #e8e8e8;
+    text-align: center;
+    color: #d9ba9f;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #d9ba9f;
+  }
 }
 
 .logo-wrapper {
@@ -42,8 +67,8 @@ header {
 }
 
 .menu ul li img {
-  margin: 0;
-  max-width: 30px;
+  margin-top: 5px;
+  max-width: 28px;
 }
 
 .menu ul li:last-child span {
@@ -51,8 +76,8 @@ header {
   transition: 0.3s;
 }
 
-.menu ul li:last-child span:hover {
-  color: #692c00;
+.menu ul li span:hover {
+  color: #ffddbf;
 }
 
 .menu ul li:nth-child(2) span {
@@ -61,6 +86,7 @@ header {
 
 .menu ul li span {
   font-size: 16px;
+  color: #d9ba9f;
 }
 
 .logo-wrapper img {
@@ -83,6 +109,7 @@ header ul {
 header ul li a {
   text-decoration: none;
   color: rgb(45, 45, 45);
+  color: #d9ba9f;
   transition: 0.2s;
 }
 
@@ -150,6 +177,10 @@ header ul li a {
   gap: 1em;
   flex: 1 1 40%;
   box-sizing: border-box;
+}
+
+.mobile-image {
+  display: none;
 }
 
 .section-one-right img {
@@ -387,13 +418,14 @@ header ul li a {
 }
 
 .section-four {
-  padding: 60px 120px 60px 160px;
+  padding: 60px 120px 160px 160px;
   background-color: #f9f1ec;
   max-width: 100%;
+  position: relative;
 }
 
 .section-four h1 {
-  position: relative;
+  text-align: center;
   font-family: prata;
   color: #141414;
   font-size: 60px;
@@ -402,8 +434,10 @@ header ul li a {
 }
 
 .form-wrapper {
+  max-width: 780px;
+  margin: 0 auto;
   padding: 40px;
-  background-color: #fff;
+  background-color: #f9f1ec;
   position: relative;
 }
 
@@ -418,17 +452,21 @@ header ul li a {
   color: #d9ba9f;
   font-family: ubuntu;
   background-color: #141414;
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-size: 24px;
   cursor: pointer;
 }
+
 .contact-form span:hover {
   color: #de7225;
 }
 
 .contact-form input {
-  width: 40%;
-  padding: 10px;
+  width: 100%;
+  padding: 25px 25px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 20px;
 }
 
 .contact-form input:focus {
@@ -436,9 +474,9 @@ header ul li a {
 }
 
 input[type="date"] {
-  font-size: 14px;
+  font-size: 20px;
   font-family: ubuntu;
-  color: rgba(0, 0, 0, 1);
+  color: #141414;
   text-transform: uppercase;
 }
 
@@ -448,17 +486,21 @@ input {
 }
 
 .custom-input {
-  width: 20%;
-  text-align: center;
+  display: flex;
 }
 
-.custom-input input {
-  width: 50px;
-  height: 50px;
-  font-size: 26px;
+.custom-input input[type="date"] {
+  font-size: 20px;
   padding-left: 20px;
   padding-right: 10px;
   color: #141414;
+  flex: 2 1 50%;
+}
+
+.custom-input input[type="number"] {
+  flex: 1 1 5%;
+  text-align: center;
+  font-size: 20px;
 }
 
 .custom-input em {
@@ -466,8 +508,9 @@ input {
   font-style: normal;
   padding-left: 5px;
   padding-right: 5px;
-  font-size: 26px;
+  font-size: 20px;
   color: #141414;
+  align-self: center;
 }
 
 #succes-sent {
@@ -482,6 +525,18 @@ input {
   transform: translate(-50%);
 }
 
+#error-sent {
+  position: absolute;
+  display: none;
+  margin: 0;
+  pad: 0;
+  color: rgb(215, 1, 12);
+  font-weight: bold;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+}
+
 @media screen and (max-width: 1860px) {
   .section-one-right img {
     max-width: 360px;
@@ -492,6 +547,7 @@ input {
   }
 
   .section-two div.image-wrapper {
+    flex-direction: row;
     padding: 30px 30px 30px 30px;
   }
 
@@ -502,5 +558,267 @@ input {
   .img-work {
     max-width: 390px;
     max-height: 390px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu ul {
+    gap: 0.5em;
+    flex-wrap: nowrap;
+  }
+
+  .menu {
+    margin: 0 auto;
+  }
+
+  .menu ul li:last-child span {
+    display: none;
+  }
+
+  #vertical-line {
+    display: none;
+  }
+
+  #telephone-text {
+    display: none;
+  }
+
+  .logo-wrapper {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-one {
+    padding: 0 0 25px 0;
+    flex-direction: column;
+  }
+  .section-one h1 {
+    line-height: 38px;
+    font-size: 30px;
+  }
+  .section-one p {
+    line-height: 20px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .veretical-text {
+    padding-bottom: 30px;
+  }
+
+  .veretical-text p {
+    font-size: 8px;
+    line-height: 22px;
+  }
+
+  .veretical-text span {
+    height: 60px;
+  }
+
+  .section-one-left {
+    display: flex;
+    gap: 0.3em;
+    padding: 0;
+    text-align: center;
+    margin-right: 18px;
+    box-sizing: border-box;
+    flex: 2;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .section-one-right {
+    justify-content: space-evenly;
+    gap: 1px;
+    width: 100%;
+  }
+
+  .section-one-right img {
+    max-width: 48%;
+    border-radius: 5%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-image {
+    display: inline;
+  }
+
+  .section-two {
+    padding: 25px 0 25px 0;
+    background-color: #141414;
+    background: linear-gradient(#141414 90%, #ffffff 10%);
+  }
+
+  .section-two h1 {
+    line-height: 38px;
+    font-size: 30px;
+    padding-left: 10px;
+  }
+
+  .section-two p {
+    line-height: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .section-two .line {
+    bottom: 45%;
+    height: 2px;
+    width: 20px;
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+
+  .section-two div.image-wrapper {
+    padding: 30px 20px 30px 20px;
+    gap: 20px;
+  }
+
+  .make-daily p {
+    background-color: #141414;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .make-wedding p {
+    background-color: #141414;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .make-event p {
+    background-color: #141414;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .make-creative p {
+    background-color: #141414;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .section-three {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .my-works-wrapper {
+    gap: 1em;
+  }
+
+  .section-four {
+    padding: 20px 20px 80px 20px;
+    background-color: #f9f1ec;
+    max-width: 100%;
+  }
+  .section-four h1 {
+    line-height: 38px;
+    font-size: 30px;
+    padding-left: 10px;
+  }
+
+  .form-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #f9f1ec;
+    position: relative;
+  }
+
+  .contact-form input {
+    width: 100%;
+    padding: 25px 25px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+
+  .contact-form span {
+    color: #d9ba9f;
+    font-family: ubuntu;
+    background-color: #141414;
+    padding: 10px 36px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .contact-form input[type="date"] {
+    font-size: 10px;
+    flex: 1 1 65%;
+  }
+
+  .custom-input input[type="number"] {
+    flex: 1 1 45%;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .custom-input em {
+    font-size: 12px;
+  }
+
+  footer p {
+    font-size: 6px;
+  }
+  #error-sent {
+    position: absolute;
+    display: none;
+    color: #fff;
+    padding: 1px 4px 2px 5px;
+    font-weight: normal;
+    left: 50%;
+    top: -80px;
+    font-size: 12px;
+    text-align: center;
+    transform: translate(-50%);
+    font-family: Ubuntu;
+    background-color: #f44f57;
+  }
+
+  #succes-sent {
+    position: absolute;
+    display: none;
+    color: #fff;
+    padding: 1px 4px 2px 5px;
+    font-weight: normal;
+    left: 50%;
+    top: -80px;
+    font-size: 12px;
+    text-align: center;
+    transform: translate(-50%);
+    font-family: Ubuntu;
+    background-color: green;
   }
 }

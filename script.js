@@ -6,6 +6,7 @@ const bookingHour = document.getElementById("hour-input");
 const bookingMinute = document.getElementById("minute-input");
 const bookBtn = document.getElementById("btnBook");
 const succesMsg = document.getElementById("succes-sent");
+const errorMsg = document.getElementById("error-sent");
 
 function formatHour(input) {
   if (input.value.length === 1) {
@@ -58,6 +59,9 @@ bookBtn.addEventListener("click", function () {
       }
     );
   } else {
-    alert("Моля, попълнете всички полета преди да изпратите имейла.");
+    errorMsg.style.display = "inline";
+    setTimeout(function () {
+      errorMsg.style.display = "none";
+    }, 3500);
   }
 });

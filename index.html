@@ -15,13 +15,15 @@
             <li>
               <a href="tel:+359897520400"><img src="/assets/img/call.png" /></a>
             </li>
-            <li>
+            <li id="telephone-text">
               <a href="tel:+359897520400"><span>+359 897 520 400</span></a>
             </li>
-            <li><span>|</span></li>
-            <li><img src="/assets/img/schedule.png" /></li>
+            <li><span id="vertical-line">|</span></li>
             <li>
-              <a href="#"><span>Book an appointment</span></a>
+              <a href="#book"><img src="/assets/img/schedule.png" /></a>
+            </li>
+            <li>
+              <a href="#book"><span>Book an appointment</span></a>
             </li>
           </ul>
         </div>
@@ -42,8 +44,16 @@
           </div>
         </div>
         <div class="section-one-right">
-          <img src="/assets/img/slide_make_04.jpg" />
-          <img src="/assets/img/slide_make_02.jpg" />
+          <img class="desktop-image" src="/assets/img/slide_make_04.jpg" />
+          <img
+            class="mobile-image"
+            src="/assets/img/slide_make_04_mobile.jpg"
+          />
+          <img class="desktop-image" src="/assets/img/slide_make_02.jpg" />
+          <img
+            class="mobile-image"
+            src="/assets/img/slide_make_02_mobile.jpg"
+          />
         </div>
       </div>
 
@@ -130,9 +140,10 @@
           </div>
         </div>
       </div>
-      <div class="section-four">
+      <div class="section-four" id="book">
         <h1>Book an appointment</h1>
         <div class="form-wrapper">
+          <p id="error-sent">Please fill all fields, before book!</p>
           <p id="succes-sent">Successfully book!</p>
           <div class="contact-form">
             <input type="text" id="firstName" placeholder="First Name" />
@@ -142,8 +153,9 @@
               id="telephoneNumber"
               placeholder="Telephone number"
             />
-            <input type="date" id="bookingDate" placeholder="dd-mm-yyyy" />
+
             <div class="custom-input">
+              <input type="date" id="bookingDate" placeholder="dd-mm-yyyy" />
               <input
                 type="number"
                 id="hour-input"
@@ -168,6 +180,14 @@
           </div>
         </div>
       </div>
+      <footer>
+        <p>
+          ©Copyright | Powered by
+          <a href="https://portfolio-tau-tawny-21.vercel.app/" target="_blank"
+            >Aleksandar Lilov</a
+          >
+        </p>
+      </footer>
     </div>
     <script src="script.js"></script>
     <script
