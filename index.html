@@ -142,8 +142,28 @@
               id="telephoneNumber"
               placeholder="Telephone number"
             />
-            <input type="date" id="bookingDate" />
-            <input type="time" id="timeInput" step="1800" />
+            <input type="date" id="bookingDate" placeholder="dd-mm-yyyy" />
+            <div class="custom-input">
+              <input
+                type="number"
+                id="hour-input"
+                placeholder="09"
+                min="9"
+                max="20"
+                step="1"
+                oninput="formatHour(this)"
+              />
+              <em>:</em>
+              <input
+                type="number"
+                id="minute-input"
+                placeholder="00"
+                min="0"
+                max="59"
+                step="10"
+                oninput="formatMinute(this)"
+              />
+            </div>
             <span id="btnBook">Book</span>
           </div>
         </div>

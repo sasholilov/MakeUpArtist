@@ -435,6 +435,41 @@ header ul li a {
   outline: none;
 }
 
+input[type="date"] {
+  font-size: 14px;
+  font-family: ubuntu;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+}
+
+input {
+  font-size: 14px;
+  font-family: ubuntu;
+}
+
+.custom-input {
+  width: 20%;
+  text-align: center;
+}
+
+.custom-input input {
+  width: 50px;
+  height: 50px;
+  font-size: 26px;
+  padding-left: 20px;
+  padding-right: 10px;
+  color: #141414;
+}
+
+.custom-input em {
+  background: none;
+  font-style: normal;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 26px;
+  color: #141414;
+}
+
 #succes-sent {
   position: absolute;
   display: none;

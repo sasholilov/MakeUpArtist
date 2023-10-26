@@ -2,9 +2,24 @@ const firstName = document.querySelector("#firstName");
 const lastName = document.getElementById("lastName");
 const phone = document.getElementById("telephoneNumber");
 const bookingDate = document.getElementById("bookingDate");
-const bookingHour = document.getElementById("timeInput");
+const bookingHour = document.getElementById("hour-input");
+const bookingMinute = document.getElementById("minute-input");
 const bookBtn = document.getElementById("btnBook");
 const succesMsg = document.getElementById("succes-sent");
+
+function formatHour(input) {
+  if (input.value.length === 1) {
+    input.value = "0" + input.value;
+  }
+}
+
+function formatMinute(input) {
+  if (input.value.length === 1) {
+    input.value = "0" + input.value;
+  }
+}
+
+function formatDate(input) {}
 
 bookBtn.addEventListener("click", function () {
   if (
@@ -12,14 +27,15 @@ bookBtn.addEventListener("click", function () {
     lastName.value &&
     phone.value &&
     bookingDate.value &&
-    bookingHour.value
+    bookingHour.value &&
+    bookingMinute.value
   ) {
     const bookingObject = {
       FirstName: firstName.value,
       LastName: lastName.value,
       Telephone: phone.value,
       BookingDate: bookingDate.value,
-      BookingHour: bookingHour.value,
+      BookingHour: `${bookingHour.value}:${bookingMinute.value}`,
     };
 
     emailjs.send("service_ov8ybw8", "template_j0a6pxw", bookingObject).then(
@@ -30,7 +46,6 @@ bookBtn.addEventListener("click", function () {
           succesMsg.style.display = "none";
         }, 3500);
 
-        // Занулете стойностите на полетата
         firstName.value = "";
         lastName.value = "";
         phone.value = "";
@@ -43,7 +58,6 @@ bookBtn.addEventListener("click", function () {
       }
     );
   } else {
-    // Ако има непопълнени полета, изведете съобщение или направете друга обработка
     alert("Моля, попълнете всички полета преди да изпратите имейла.");
   }
 });
