@@ -8,6 +8,12 @@ const bookBtn = document.getElementById("btnBook");
 const succesMsg = document.getElementById("succes-sent");
 const errorMsg = document.getElementById("error-sent");
 
+window.addEventListener("load", function () {
+  const today = new Date().toISOString().slice(0, 10);
+  const bookingDate = document.getElementById("bookingDate");
+  bookingDate.value = today;
+});
+
 function formatHour(input) {
   if (input.value.length === 1) {
     input.value = "0" + input.value;
@@ -19,8 +25,6 @@ function formatMinute(input) {
     input.value = "0" + input.value;
   }
 }
-
-function formatDate(input) {}
 
 bookBtn.addEventListener("click", function () {
   if (

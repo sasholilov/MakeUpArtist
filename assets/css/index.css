@@ -456,6 +456,7 @@ body {
   color: #d9ba9f;
   font-family: ubuntu;
   background-color: #141414;
+  margin-top: 1em;
   padding: 10px 40px;
   font-size: 24px;
   cursor: pointer;
@@ -492,6 +493,7 @@ input {
 .custom-input {
   display: flex;
   width: 100%;
+  gap: 5px;
 }
 
 .custom-input input[type="date"] {
@@ -543,9 +545,21 @@ input {
   transform: translate(-50%);
 }
 
+.mobile-number {
+  display: none;
+}
+
 @media screen and (max-width: 1860px) {
   .section-one-right img {
     max-width: 360px;
+  }
+
+  .desktop-number {
+    display: none;
+  }
+
+  .mobile-number {
+    display: block;
   }
 
   .section-two img {
