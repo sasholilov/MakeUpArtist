@@ -27,14 +27,7 @@ function formatMinute(input) {
 }
 
 bookBtn.addEventListener("click", function () {
-  if (
-    firstName.value &&
-    lastName.value &&
-    phone.value &&
-    bookingDate.value &&
-    bookingHour.value &&
-    bookingMinute.value
-  ) {
+  if (firstName.value && lastName.value && phone.value) {
     const bookingObject = {
       FirstName: firstName.value,
       LastName: lastName.value,
