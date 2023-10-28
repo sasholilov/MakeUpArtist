@@ -543,6 +543,11 @@ body {
   position: relative;
 }
 
+.contact-address a {
+  text-decoration: none;
+  color: #141414;
+}
+
 .contact-address p:first-child:before {
   content: url(/assets/img/location.png);
   position: absolute;
@@ -553,6 +558,7 @@ body {
 
 .contact-address p:nth-child(2):before {
   content: url(/assets/img/instagram.png);
+
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -648,7 +654,8 @@ input {
   color: green;
   font-weight: bold;
   left: 50%;
-  top: 10px;
+  top: 0px;
+  text-align: center;
   transform: translate(-50%);
 }
 
@@ -839,6 +846,7 @@ input {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 18px;
   }
 
   .make-wedding p {
@@ -852,6 +860,7 @@ input {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 18px;
   }
 
   .make-event p {
@@ -865,6 +874,7 @@ input {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 18px;
   }
   .make-creative p {
     background-color: #141414;
@@ -877,6 +887,7 @@ input {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 18px;
   }
 
   .section-three {
@@ -986,16 +997,15 @@ input {
   #succes-sent {
     position: absolute;
     display: none;
-    color: #fff;
+    color: green;
     padding: 1px 4px 2px 5px;
     font-weight: normal;
     left: 50%;
-    top: -80px;
-    font-size: 12px;
+    top: 420px;
+    font-size: 14px;
     text-align: center;
     transform: translate(-50%);
     font-family: Ubuntu;
-    background-color: green;
   }
 
   .contact-address {

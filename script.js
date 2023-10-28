@@ -23,11 +23,6 @@ product.forEach((pr) => {
   });
 });
 
-product.addEventListener("mouseout", function () {
-  product.querySelector("p").style.color = "#ffddbf";
-  console.log("hover");
-});
-
 window.addEventListener("load", function () {
   const today = new Date().toISOString().slice(0, 10);
   const bookingDate = document.getElementById("bookingDate");
