@@ -7,6 +7,26 @@ const bookingMinute = document.getElementById("minute-input");
 const bookBtn = document.getElementById("btnBook");
 const succesMsg = document.getElementById("succes-sent");
 const errorMsg = document.getElementById("error-sent");
+const product = document.querySelectorAll(".product");
+
+product.forEach((pr) => {
+  pr.addEventListener("mouseover", function () {
+    pr.querySelector("p").style.color = "white";
+    pr.querySelector("h3").style.color = "white";
+    console.log("hover");
+  });
+
+  pr.addEventListener("mouseout", function () {
+    pr.querySelector("p").style.color = "#ffddbf";
+    pr.querySelector("h3").style.color = "#ffddbf";
+    console.log("hover");
+  });
+});
+
+product.addEventListener("mouseout", function () {
+  product.querySelector("p").style.color = "#ffddbf";
+  console.log("hover");
+});
 
 window.addEventListener("load", function () {
   const today = new Date().toISOString().slice(0, 10);
