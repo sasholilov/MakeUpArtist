@@ -138,8 +138,9 @@ body {
 
 .section-one p {
   line-height: 28px;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
   text-align: left;
   color: #141414;
   font-family: ubuntu;
@@ -744,7 +745,7 @@ input {
   }
   .section-one p {
     line-height: 20px;
-    font-size: 10px;
+    font-size: 16px;
     text-align: center;
   }
 
