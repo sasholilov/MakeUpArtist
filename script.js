@@ -1,3 +1,35 @@
+async function fetchSheetData() {
+  const res = await fetch(
+    "https://api.sheetbest.com/sheets/14af7a5f-7ad3-4dbf-9d73-138045b4945a"
+  );
+
+  const data = await res.json();
+  console.log(data);
+  const express = document.getElementsByClassName("express");
+  const classic = document.getElementsByClassName("classic");
+  const daily = document.getElementsByClassName("daily");
+  const evening = document.getElementsByClassName("evening");
+  const graduatuion = document.getElementsByClassName("graduation");
+  const lamination = document.getElementsByClassName("lamination");
+  const eyelashes = document.getElementsByClassName("eyelashes");
+  const personal = document.getElementsByClassName("personal");
+  const lesson = document.getElementsByClassName("lesson");
+
+  if (data.length) {
+    express[0].innerHTML = `${data[0].value}лв`;
+    classic[0].innerHTML = `${data[1].value}лв`;
+    daily[0].innerHTML = `${data[2].value}лв`;
+    evening[0].innerHTML = `${data[3].value}лв`;
+    graduatuion[0].innerHTML = `${data[4].value}лв`;
+    lamination[0].innerHTML = `${data[5].value}лв`;
+    eyelashes[0].innerHTML = `${data[6].value}лв`;
+    personal[0].innerHTML = `+${data[7].value}лв`;
+    lesson[0].innerHTML = `${data[8].value}лв`;
+  }
+}
+
+fetchSheetData();
+
 const firstName = document.querySelector("#firstName");
 const lastName = document.getElementById("lastName");
 const phone = document.getElementById("telephoneNumber");
@@ -13,13 +45,11 @@ product.forEach((pr) => {
   pr.addEventListener("mouseover", function () {
     pr.querySelector("p").style.color = "white";
     pr.querySelector("h3").style.color = "white";
-    console.log("hover");
   });
 
   pr.addEventListener("mouseout", function () {
     pr.querySelector("p").style.color = "#ffddbf";
     pr.querySelector("h3").style.color = "#ffddbf";
-    console.log("hover");
   });
 });
 
